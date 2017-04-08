@@ -5,6 +5,6 @@ Restricts access to WP Media uploads to logged in users only. Requires some rule
 Plugin HomePage: http://orbisius.com/products/wordpress-plugins/orbisius-wp-media-protector/
 
 If you find bugs or file a ticket using the link below
-https://github.com/lordspace/orbisius-wp-media-protector/issues
+https://github.com/orbisius/orbisius-wp-media-protector/issues
 
 Author: Svetoslav Marinov (Slavi) | http://orbisius.com

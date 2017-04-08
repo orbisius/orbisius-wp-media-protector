@@ -19,7 +19,7 @@ Add the following lines to the .htaccess file (usually in the root WP folder).
     RewriteEngine On
     RewriteCond %{REQUEST_URI} ^(.*?/?)wp-content/uploads/.* [NC]
     RewriteCond %{REQUEST_URI} !orbisius_media_protector [NC]
-    RewriteRule . http://%{HTTP_HOST}%1/?orbisius_media_protector=%{REQUEST_URI} [L,QSA]
+	RewriteRule . %1/?orbisius_media_protector=%{REQUEST_URI} [L,QSA]
 </IfModule>
 
  * @todo: Ideas for improvement
