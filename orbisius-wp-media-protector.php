@@ -83,7 +83,16 @@ class orbisius_wp_media_uploads_protector {
                     }
 
                     $fp = fopen( $file, 'rb' );
-                    fpassthru( $fp );
+
+                    if (!empty($fp)) {
+	                    flock($fp, LOCK_SH);
+                        fpassthru($fp);
+	                    flock($fp, LOCK_UN);
+	                    fclose($fp);
+                    } else {
+	                    status_header( 404 );
+	                    echo "Cannot open file.";
+                    }
                 } else {
                     status_header( 404 );
                     global $wp_query;
