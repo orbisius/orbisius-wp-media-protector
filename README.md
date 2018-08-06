@@ -7,4 +7,14 @@ Plugin HomePage: http://orbisius.com/products/wordpress-plugins/orbisius-wp-medi
 If you find bugs or file a ticket using the link below
 https://github.com/orbisius/orbisius-wp-media-protector/issues
 
+# Troubleshooting
+Please, check your apache and WordPress debug.log files.
+
+# Hire us
+If you'd us to customize the tool or troubleshoot your site (both paid services) feel free to get a quote
+https://orbisius.com/contact
+
+# Here are the services we offer
+https://orbisius.com/services
+
 Author: Svetoslav Marinov (Slavi) | http://orbisius.com
