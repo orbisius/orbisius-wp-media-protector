@@ -121,7 +121,7 @@ class orbisius_wp_media_uploads_protector {
         
         if (       ( strpos( $req_file, '..' ) === false ) 
                 && ( strpos( $req_file, '/wp-content/uploads/' ) !== false )
-                && preg_match( '#^/wp-content/uploads/[\s\w\-\/\\\]+\.([a-z]{2,5})$#si', $req_file ) ) {
+                && preg_match( '#^/wp-content/uploads/[\.\s\w\-\/\\\]+\.([a-z]{2,5})$#si', $req_file ) ) {
             $ok = 1;
         }
                 
