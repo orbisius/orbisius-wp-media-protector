@@ -18,3 +18,11 @@ https://orbisius.com/contact
 https://orbisius.com/services
 
 Author: Svetoslav Marinov (Slavi) | http://orbisius.com
+
+# Changelog
+1.0.1
+- remove any params from the request url
+- allow numbers in the extension
+
+
+1.0.0 - initial release

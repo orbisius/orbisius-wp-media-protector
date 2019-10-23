@@ -36,7 +36,11 @@ class orbisius_wp_media_uploads_protector {
     function protect_uploads() {
         if ( ! empty( $_REQUEST['orbisius_media_protector'] ) ) {
             $req_file = $_REQUEST['orbisius_media_protector'];
-            
+			$req_file = strip_tags($req_file); // sanitize
+			$req_file = trim($req_file);
+			$req_file = preg_replace('#\?.*#si', '', $req_file); // rm any request params
+			$req_file = substr($req_file, 0, 255);
+
             if ( ! $this->check_file( $req_file ) ) {
                 wp_die( "Invalid request.", 'Error' );
             }
