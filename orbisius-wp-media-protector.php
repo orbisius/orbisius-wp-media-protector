@@ -3,7 +3,7 @@
   Plugin Name: Orbisius WP Media Protector
   Plugin URI: http://orbisius.com/products/wordpress-plugins/orbisius-wp-media-protector/
   Description: Restricts access to WP Media uploads to logged in users only. Requires some rules to be added in .htaccess file as well. This plugin must be saved in wp-content/mu-plugins/ folder. See plugin page for more details.
-  Version: 1.0.0
+  Version: 1.0.1
   Author: Svetoslav Marinov (Slavi)
   Author URI: http://orbisius.com
  */
@@ -121,7 +121,7 @@ class orbisius_wp_media_uploads_protector {
         
         if (       ( strpos( $req_file, '..' ) === false ) 
                 && ( strpos( $req_file, '/wp-content/uploads/' ) !== false )
-                && preg_match( '#^/wp-content/uploads/[\s\w\-\/\\\]+\.([a-z]{2,5})$#si', $req_file ) ) {
+                && preg_match( '#^/wp-content/uploads/[\s\w\-\/\\\]+\.([a-z\d]{2,5})$#si', $req_file ) ) {
             $ok = 1;
         }
                 
